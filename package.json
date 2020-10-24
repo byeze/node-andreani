@@ -1,0 +1,36 @@
+{
+  "name": "@nchsala/andreani",
+  "version": "1.0.0",
+  "description": "A simple helper to use Andreani API with nodejs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha -r ts-node/register 'spec/**/*.spec.ts' --timeout 7000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nchsala/andreani.git"
+  },
+  "author": "Ignacio Salaberria",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nchsala/andreani/issues"
+  },
+  "homepage": "https://github.com/nchsala/andreani#readme",
+  "devDependencies": {
+    "@types/chai": "^4.2.14",
+    "@types/mocha": "^8.0.3",
+    "chai": "^4.2.0",
+    "mocha": "^8.2.0",
+    "ts-loader": "^8.0.6",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3",
+    "webpack": "^5.2.0",
+    "webpack-cli": "^4.1.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "axios": "^0.21.0"
+  }
+}
