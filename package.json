@@ -1,6 +1,6 @@
 {
   "name": "@nchsala/andreani",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple helper to use Andreani API with nodejs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -21,6 +21,7 @@
   "devDependencies": {
     "@types/chai": "^4.2.14",
     "@types/mocha": "^8.0.3",
+    "@types/node": "^14.14.2",
     "chai": "^4.2.0",
     "mocha": "^8.2.0",
     "ts-loader": "^8.0.6",
