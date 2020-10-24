@@ -1,6 +1,6 @@
 {
   "name": "@nchsala/andreani",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple helper to use Andreani API with nodejs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
