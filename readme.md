@@ -16,7 +16,7 @@ Para obtener dichas credenciales será necesario que se comonunique con la empre
 ## Instalación
 
 ```
-npm install --save-dev @nchsala/andreani
+npm install @nchsala/andreani
 ```
 
 ## Uso
