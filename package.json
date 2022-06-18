@@ -1,23 +1,24 @@
 {
-  "name": "@nchsala/andreani",
-  "version": "1.0.2",
-  "description": "A simple helper to use Andreani API with nodejs",
+  "name": "node-andreani",
+  "version": "1.0.0",
+  "description": "Package to interact with Andreani's API",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha -r ts-node/register 'spec/**/*.spec.ts' --timeout 7000"
+    "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha -r ts-node/register 'spec/**/*.spec.ts' --timeout 7000",
+    "publish": "npm run build && npm publish --access public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nchsala/andreani.git"
+    "url": "git+https://github.com/byeze/node-andreani.git"
   },
-  "author": "Ignacio Salaberria",
+  "author": "Ezequiel Calonge",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nchsala/andreani/issues"
+    "url": "https://github.com/byeze/node-andreani/issues"
   },
-  "homepage": "https://github.com/nchsala/andreani#readme",
+  "homepage": "https://github.com/byeze/node-andreani#readme",
   "devDependencies": {
     "@types/chai": "^4.2.14",
     "@types/mocha": "^8.0.3",
