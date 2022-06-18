@@ -1,6 +1,6 @@
 {
   "name": "node-andreani",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Package to interact with Andreani's API",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
