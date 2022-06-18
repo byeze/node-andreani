@@ -36,14 +36,14 @@ export class Andreani {
     };
   }
 
-  constructor(credentials: Credentials, options: Options) {
+  constructor({ credentials, options }: { credentials: Credentials; options: Options }) {
     this.CONTRATO_DOMICILIO = credentials.CONTRATO_DOMICILIO;
     this.CONTRATO_SUCURSAL = credentials.CONTRATO_SUCURSAL;
     this.CODIGO_CLIENTE = credentials.CODIGO_CLIENTE;
     this.USER = credentials.USER;
     this.PASS = credentials.PASS;
 
-    this.BASE_URL = options.use === "production" ? options.sandbox_url : options.production_url;
+    this.BASE_URL = options.use === "production" ? options.production_url : options.sandbox_url;
   }
 
   get isLogged() {

@@ -2,10 +2,13 @@ import { Andreani } from "../src/index";
 
 const credentials = require("../src/credentials.json");
 
-const andreani = new Andreani(credentials, {
-  use: "sandbox",
-  sandbox_url: "https://apisqa.andreani.com/",
-  production_url: "https://apis.andreani.com",
+const andreani = new Andreani({
+  credentials,
+  options: {
+    use: "sandbox",
+    sandbox_url: "https://apisqa.andreani.com/",
+    production_url: "https://apis.andreani.com",
+  },
 });
 
 andreani

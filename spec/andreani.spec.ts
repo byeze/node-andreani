@@ -12,12 +12,14 @@ else {
   process.exit();
 }
 
-const andreani = new Andreani(credentials, {
-  use: "sandbox",
-  sandbox_url: "https://apisqa.andreani.com/",
-  production_url: "https://apis.andreani.com",
+const andreani = new Andreani({
+  credentials,
+  options: {
+    use: "sandbox",
+    sandbox_url: "https://apisqa.andreani.com/",
+    production_url: "https://apis.andreani.com",
+  },
 });
-
 let NUMERO_ANDREANI: string;
 
 describe("Cotizaciones", () => {
