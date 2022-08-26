@@ -54,8 +54,17 @@ export class Andreani {
     return Buffer.from(`${this.USER}:${this.PASS}`).toString("base64");
   }
 
-  private async getReq(url: string) {
-    return await axios.get(url, this.configAuth).then((x) => x.data);
+  private async getReq(url: string, binary: boolean = false) {
+
+    const binaryConfigAuth = () => {
+      let result = this.configAuth;
+      const cfg = {...result, responseType: 'arraybuffer'};
+      return cfg;
+    }
+          
+    const auth = binary ? binaryConfigAuth() : this.configAuth;
+
+    return await axios.get(url, auth).then((x) => x.data);
   }
 
   private async postReq(url: string, body: any) {
@@ -127,7 +136,7 @@ export class Andreani {
   }
 
   private async $obtenerEtiqueta(remito: string) {
-    return await this.getReq(this.OBT_ETQ_URL(remito));
+    return await this.getReq(this.OBT_ETQ_URL(remito), true);
   }
 
   async cotizarEnvioSucursal(params: PedidoCotizacion): Promise<Cotizacion> {
